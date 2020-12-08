@@ -58,3 +58,43 @@ def allPowersTwo():
 
 #print(allPowersTwo())
 
+def allOddNo(a, b):
+    """
+    Sum of all odd numbers between a..b(incl)
+
+    Args:
+        int a, b
+    Variables:
+        int sum, i
+    Return:
+        sum
+    """
+    sum = 0
+    for i in range(a, b + 1):
+        if i % 2 != 0:
+            sum += i
+    return sum
+
+#print(allOddNo(1,100))
+
+def sumOddDigits(arg):
+    """
+    Sum of all odd digits in a number
+    example 32677 => 3 + 7 + 7
+
+    Args:
+        int arg
+    Variables:
+        int i, sum
+    Return:
+        sum
+    """
+    sum = 0
+    arg = str(arg)
+    for i in range(len(arg)):
+        if int(arg[i]) % 2 != 0:
+            sum += int(arg[i])
+    return sum
+
+print(sumOddDigits(32677))
+
