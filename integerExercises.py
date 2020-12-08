@@ -6,23 +6,38 @@ def smallLarge(arg):
     smallest and largest of the inputs
 
     Args:
-        int arg
+        arg of type int, float
     Variables:
         int smallest, largest, i
     Return:
-        small and large of input
+        smallest in position 0 and largest in position 1
     """
-    arg = str(arg)
-    smallest = int(arg[0])
-    largest = int(arg[0])
+    smallest = arg[0]
+    largest = arg[0]
     for i in range(len(arg)):
-        if int(arg[i]) > largest:
-            largest = int(arg[i])
-        elif int(arg[i]) < smallest: 
-            smallest = int(arg[i])
+        if arg[i] > largest:
+            largest = arg[i]
+        elif arg[i] < smallest: 
+            smallest = arg[i]
     return smallest, largest
 
-#print(smallLarge(1729))
+#test = [1.2, 3, 4, 5.6]
+#print(smallLarge(test))
+
+def averageValue(arg):
+    """
+    Print the average of values
+
+    Arguments:
+        int, float arg
+    Return:
+        average
+    """
+    sigma = 0
+    for i in range(len(arg)):
+        sigma += arg[i]
+    return sigma / len(arg)
+
 
 def numberEvenOdd(arg):
     """
@@ -180,5 +195,5 @@ def sumOddDigits(arg):
             sum += int(arg[i])
     return sum
 
-print(sumOddDigits(32677))
+#print(sumOddDigits(32677))
 
