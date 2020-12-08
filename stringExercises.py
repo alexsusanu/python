@@ -1,3 +1,5 @@
+# string related exercises
+# p4-3
 def readUpper(arg):
     """
     Read only uppercase letters in a string
